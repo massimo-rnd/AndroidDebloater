@@ -20,4 +20,9 @@
     </PackageReference>
     <PackageReference Include="MessageBox.Avalonia" Version="3.2.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Components\Scripts\test.sh" />
+    <EmbeddedResource Include="Components\Scripts\test.sh" />
+  </ItemGroup>
 </Project>

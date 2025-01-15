@@ -5,7 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="AndroidDebloater.MainWindow"
         Title="AndroidDebloater">
-	<Grid>
+	<Grid Margin="10">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
@@ -30,13 +30,13 @@
 			</Grid.ColumnDefinitions>
 
 			<Label Grid.Row="0" Grid.Column="0" Content="See Connected Devices"/>
-			<Button Grid.Row="1" Grid.Column="0" Content="List ADB Devices"/>	
+			<Button Click="ListDevices" Grid.Row="1" Grid.Column="0" Content="List ADB Devices"/>	
 			<Label Grid.Row="2" Grid.Column="0" Margin="0 20 0 0" Content="Select your Debloat Package"/>
-			<RadioButton Grid.Row="3" Grid.Column="0" Content="Google Bloatware"/>
-			<RadioButton Grid.Row="3" Grid.Column="1" Content="Android System Bloat"/>
-			<RadioButton Grid.Row="4" Grid.Column="0" Content="Third-Party Bloat"/>
-			<RadioButton Grid.Row="4" Grid.Column="1" Content="Complete Debloat"/>
-			<Button Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" Content="Start Debloat"/>
+			<RadioButton x:Name="gDebloat" IsChecked="True" Grid.Row="3" Grid.Column="0" Content="Google Bloatware"/>
+			<RadioButton x:Name="aDebloat" Grid.Row="3" Grid.Column="1" Content="Android System Bloat"/>
+			<RadioButton x:Name="tpDebloat" Grid.Row="4" Grid.Column="0" Content="Third-Party Bloat"/>
+			<RadioButton x:Name="fullDebloat" Grid.Row="4" Grid.Column="1" Content="Complete Debloat"/>
+			<Button Click="StartDebloater" Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" Content="Start Debloat"/>
 			<Button Click="ShowHelp" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Help"/>
 		</Grid>
 		
@@ -52,7 +52,7 @@
 					<RowDefinition Height="*"/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Content="Commandline Output"/>
-				<TextBox Grid.Row="1" Background="Black" Foreground="White" IsReadOnly="True" Text="Test"/>
+				<TextBox x:Name="clOutput" Grid.Row="1" Background="Black" Foreground="White" IsReadOnly="True" Text=""/>
 			</Grid>
 		</Border>
 	</Grid>
