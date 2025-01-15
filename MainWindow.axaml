@@ -37,7 +37,7 @@
 			<RadioButton Grid.Row="4" Grid.Column="0" Content="Third-Party Bloat"/>
 			<RadioButton Grid.Row="4" Grid.Column="1" Content="Complete Debloat"/>
 			<Button Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" Content="Start Debloat"/>
-			<Button Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Help"/>
+			<Button Click="ShowHelp" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Help"/>
 		</Grid>
 		
 		
