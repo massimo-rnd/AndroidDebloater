@@ -22,7 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Components\Scripts\test.bat" />
     <None Remove="Components\Scripts\test.sh" />
+    <EmbeddedResource Include="Components\Scripts\test.bat" />
     <EmbeddedResource Include="Components\Scripts\test.sh" />
   </ItemGroup>
 </Project>

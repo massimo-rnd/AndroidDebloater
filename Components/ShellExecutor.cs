@@ -21,9 +21,9 @@ public class ShellExecutor
             {
                 case 1:
                     //Google BAT
-                    WinScriptHandler.ExecuteBatchScript(
-                        WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.test.bat"));
-                    return Execute(DebloatScripts.gDebloat);
+                    //string scriptFile = WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.test.bat");
+                    
+                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.test.bat"));
                     break;
                 case 2:
                     //AndroidSystem BAT
