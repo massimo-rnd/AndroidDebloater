@@ -21,21 +21,19 @@ public class ShellExecutor
             {
                 case 1:
                     //Google BAT
-                    //string scriptFile = WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.test.bat");
-                    
-                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.test.bat"));
+                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.google.bat"));
                     break;
                 case 2:
                     //AndroidSystem BAT
-                    return Execute(DebloatScripts.aDebloat);
+                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.system.bat"));
                     break;
                 case 3:
                     //ThirdParty BAT
-                    return Execute(DebloatScripts.tpDebloat);
+                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.thirdparty.bat"));
                     break;
                 case 4:
                     //FullDebloat BAT
-                    return Execute(DebloatScripts.fullDebloat);
+                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.full.bat"));
                     break;
                 default:
                     //nothing
@@ -48,19 +46,22 @@ public class ShellExecutor
                 case 1:
                     //Google Debloat BASH
                     return BashScriptHandler.ExecuteBashScript(
-                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.test.sh"));
+                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.google.sh"));
                     break;
                 case 2:
                     //AndroidSystem BASH
-                    return Execute(DebloatScripts.aDebloatBash);
+                    return BashScriptHandler.ExecuteBashScript(
+                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.system.sh"));
                     break;
                 case 3:
                     //ThirdParty BASH
-                    return Execute(DebloatScripts.tpDebloatBash);
+                    return BashScriptHandler.ExecuteBashScript(
+                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.thirdparty.sh"));
                     break;
                 case 4:
                     //FullDebloat BASH
-                    return Execute(DebloatScripts.fullDebloatBash);
+                    return BashScriptHandler.ExecuteBashScript(
+                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.full.sh"));
                     break;
                 default:
                     //nothing

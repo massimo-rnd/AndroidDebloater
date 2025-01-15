@@ -70,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736951912138</updated>
       <workItem from="1736951913486" duration="89000" />
-      <workItem from="1736952042933" duration="7623000" />
+      <workItem from="1736952042933" duration="9537000" />
     </task>
     <servers />
   </component>
@@ -89,10 +89,10 @@
           <line>77</line>
           <properties documentPath="$PROJECT_DIR$/Components/ShellExecutor.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="2390" />
+              <option value="2785" />
             </startOffsets>
             <endOffsets>
-              <option value="2446" />
+              <option value="2841" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

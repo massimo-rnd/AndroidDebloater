@@ -23,14 +23,6 @@ namespace AndroidDebloater
         public void ListDevices(object sender, RoutedEventArgs args)
         {
             clOutput.Text = ShellExecutor.ListADB();
-            
-            //DEBUG
-            var assembly = Assembly.GetExecutingAssembly();
-            var resources = assembly.GetManifestResourceNames();
-            foreach (var resource in resources)
-            {
-                Console.WriteLine(resource);
-            }
         }
 
         public void StartDebloater(object sender, RoutedEventArgs args)

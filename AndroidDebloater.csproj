@@ -24,7 +24,24 @@
   <ItemGroup>
     <None Remove="Components\Scripts\test.bat" />
     <None Remove="Components\Scripts\test.sh" />
-    <EmbeddedResource Include="Components\Scripts\test.bat" />
-    <EmbeddedResource Include="Components\Scripts\test.sh" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Components\Scripts\google.bat" />
+    <EmbeddedResource Include="Components\Scripts\google.bat" />
+    <None Remove="Components\Scripts\google.sh" />
+    <EmbeddedResource Include="Components\Scripts\google.sh" />
+    <None Remove="Components\Scripts\system.bat" />
+    <EmbeddedResource Include="Components\Scripts\system.bat" />
+    <None Remove="Components\Scripts\system.sh" />
+    <EmbeddedResource Include="Components\Scripts\system.sh" />
+    <None Remove="Components\Scripts\thirdparty.bat" />
+    <EmbeddedResource Include="Components\Scripts\thirdparty.bat" />
+    <None Remove="Components\Scripts\thirdparty.sh" />
+    <EmbeddedResource Include="Components\Scripts\thirdparty.sh" />
+    <None Remove="Components\Scripts\full.bat" />
+    <EmbeddedResource Include="Components\Scripts\full.bat" />
+    <None Remove="Components\Scripts\full.sh" />
+    <EmbeddedResource Include="Components\Scripts\full.sh" />
   </ItemGroup>
 </Project>
