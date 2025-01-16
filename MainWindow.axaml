@@ -38,7 +38,7 @@
 			<RadioButton x:Name="tpDebloat" Grid.Row="4" Grid.Column="0" Content="Third-Party Bloat"/>
 			<RadioButton x:Name="fullDebloat" Grid.Row="4" Grid.Column="1" Content="Complete Debloat"/>
 			
-			<Button Click="StartDebloater" Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" Content="Start Debloat"/>
+			<Button x:Name="DebloatBtn" Click="StartDebloater" Grid.Row="5" Grid.Column="0" VerticalAlignment="Bottom" Content="Start Debloat"/>
 			<Button Click="ShowHelp" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Help"/>
 		</Grid>
 		

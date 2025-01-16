@@ -1,5 +1,6 @@
 using System;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using AndroidDebloater.Components;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -12,6 +13,7 @@ namespace AndroidDebloater
         public MainWindow()
         {
             InitializeComponent();
+            //DebloatBtn.IsEnabled = false;
         }
 
         public void ShowHelp(object sender, RoutedEventArgs args)
@@ -23,6 +25,18 @@ namespace AndroidDebloater
         public void ListDevices(object sender, RoutedEventArgs args)
         {
             clOutput.Text = ShellExecutor.ListADB();
+            // Regular expression to match the exact word "device"
+            string pattern = @"\bdevice\b";
+
+            // Match only lines with the exact word "device"
+            foreach (string line in clOutput.Text.Split('\n'))
+            {
+                if (Regex.IsMatch(line.Trim(), pattern))
+                {
+                    Console.WriteLine($"Matched: {line.Trim()}");
+                    DebloatBtn.IsEnabled = true;
+                }
+            }
         }
 
         public void StartDebloater(object sender, RoutedEventArgs args)
