@@ -8,6 +8,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
+    <PackageIcon>test-icon.ico</PackageIcon>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -31,6 +32,10 @@
   <ItemGroup>
     <None Update="adb/**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test-icon.ico">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
