@@ -70,7 +70,7 @@ public class ShellExecutor
         {
             FileName = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "cmd.exe" : "/bin/bash",
             Arguments = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
-                ? $"/C \"{scriptPath}\" \"{adbPath}\""
+                ? $"/C \"\"{scriptPath}\" \"{adbPath}\"\""
                 : $"\"{scriptPath}\" \"{adbPath}\"",
             RedirectStandardOutput = true,
             RedirectStandardError = true,
