@@ -78,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736951912138</updated>
       <workItem from="1736951913486" duration="89000" />
-      <workItem from="1736952042933" duration="16134000" />
+      <workItem from="1736952042933" duration="26436000" />
     </task>
     <servers />
   </component>
@@ -88,24 +88,5 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Components/ShellExecutor.cs</url>
-          <line>78</line>
-          <properties documentPath="$PROJECT_DIR$/Components/ShellExecutor.cs" containingFunctionPresentation="Method 'Execute'">
-            <startOffsets>
-              <option value="2884" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2940" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

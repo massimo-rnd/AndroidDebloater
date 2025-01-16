@@ -29,26 +29,60 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Components\Scripts\test.bat" />
-    <None Remove="Components\Scripts\test.sh" />
+    <None Update="adb/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Components\Scripts\google.bat" />
-    <EmbeddedResource Include="Components\Scripts\google.bat" />
-    <None Remove="Components\Scripts\google.sh" />
-    <EmbeddedResource Include="Components\Scripts\google.sh" />
-    <None Remove="Components\Scripts\system.bat" />
-    <EmbeddedResource Include="Components\Scripts\system.bat" />
-    <None Remove="Components\Scripts\system.sh" />
-    <EmbeddedResource Include="Components\Scripts\system.sh" />
-    <None Remove="Components\Scripts\thirdparty.bat" />
-    <EmbeddedResource Include="Components\Scripts\thirdparty.bat" />
-    <None Remove="Components\Scripts\thirdparty.sh" />
-    <EmbeddedResource Include="Components\Scripts\thirdparty.sh" />
-    <None Remove="Components\Scripts\full.bat" />
-    <EmbeddedResource Include="Components\Scripts\full.bat" />
-    <None Remove="Components\Scripts\full.sh" />
-    <EmbeddedResource Include="Components\Scripts\full.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\full.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\bash\google.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\bash\system.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\bash\thirdparty.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\windows\full.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\windows\google.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\windows\system.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scripts\windows\thirdparty.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\adb\macos\adb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\adb\linux\adb" />
+    <EmbeddedResource Include="Components\adb\linux\adb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\adb\windows\adb.exe" />
+    <EmbeddedResource Include="Components\adb\windows\adb.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\adb\windows\AdbWinApi.dll" />
+    <EmbeddedResource Include="Components\adb\windows\AdbWinApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\adb\windows\AdbWinUsbApi.dll" />
+    <EmbeddedResource Include="Components\adb\windows\AdbWinUsbApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Components\adb\linux\" />
+    <Folder Include="Components\adb\macos\" />
+    <Folder Include="Components\adb\windows\" />
   </ItemGroup>
 </Project>

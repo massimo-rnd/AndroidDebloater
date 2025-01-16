@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace AndroidDebloater.Components;
@@ -10,114 +11,90 @@ public class ShellExecutor
     public static string ListADB()
     {
         string command = "\"adb devices\"";
-        return Execute(command);
+        return AdbHelper.ExecuteAdbCommand("devices"); //Execute(command);
     }
 
     public static string StartDebloat(int package)
     {
-        if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-        {
-            switch (package)
+        switch (package)
             {
                 case 1:
-                    //Google BAT
-                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.google.bat"));
+                    //Google
+                    //return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.google.bat"));
+                    return ExecuteScript("google");
                     break;
                 case 2:
-                    //AndroidSystem BAT
-                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.system.bat"));
+                    //AndroidSystem
+                    return ExecuteScript("system");
                     break;
                 case 3:
-                    //ThirdParty BAT
-                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.thirdparty.bat"));
+                    //ThirdParty
+                    return ExecuteScript("thirdparty");
                     break;
                 case 4:
-                    //FullDebloat BAT
-                    return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.full.bat"));
+                    //FullDebloat
+                    return ExecuteScript("full");
                     break;
                 default:
                     //nothing
                     break;
             }
-        }else
-        {
-            switch (package)
-            {
-                case 1:
-                    //Google Debloat BASH
-                    return BashScriptHandler.ExecuteBashScript(
-                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.google.sh"));
-                    break;
-                case 2:
-                    //AndroidSystem BASH
-                    return BashScriptHandler.ExecuteBashScript(
-                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.system.sh"));
-                    break;
-                case 3:
-                    //ThirdParty BASH
-                    return BashScriptHandler.ExecuteBashScript(
-                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.thirdparty.sh"));
-                    break;
-                case 4:
-                    //FullDebloat BASH
-                    return BashScriptHandler.ExecuteBashScript(
-                        BashScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.full.sh"));
-                    break;
-                default:
-                    //nothing
-                    break;
-            }
-        }
 
         return "";
     }
     
-    public static string Execute(string command)
+    public static string ExecuteScript(string scriptName)
     {
-        Process shell = new Process();
-        //get OS Platform for Shell type
+        string scriptPath = string.Empty;
+        string adbPath = AdbHelper.GetAdbPath(); // Get the bundled adb path
+
         if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            shell.StartInfo.FileName = "cmd.exe"; // Use "bash" on Linux/MacOS
-            shell.StartInfo.Arguments = $"/C {command}"; // "/C" runs the command and exits
+            scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Components", "Scripts", "windows", scriptName + ".bat");
         }
-        else
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
-            shell.StartInfo.FileName = "bash"; // Use "bash" on Linux/MacOS
-            shell.StartInfo.Arguments = $"-c {command}"; // "/C" runs the command and exits
+            scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Components", "Scripts", "bash", scriptName + ".sh");
         }
-        
-        shell.StartInfo.RedirectStandardOutput = true; // Redirect output
-        shell.StartInfo.RedirectStandardError = true; // Redirect error output
-        shell.StartInfo.UseShellExecute = false; // Required for redirection
-        shell.StartInfo.CreateNoWindow = true; // Don't show a window
-        
-        try
+        else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
         {
-            shell.Start();
+            scriptPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Components", "Scripts", "bash", scriptName + ".sh");
+        }
 
-            // Read the output
-            string output = shell.StandardOutput.ReadToEnd();
-            string error = shell.StandardError.ReadToEnd();
+        if (!File.Exists(scriptPath))
+        {
+            throw new FileNotFoundException("Script not found: " + scriptPath);
+        }
 
-            shell.WaitForExit(); // Wait for the process to finish
+        var processInfo = new ProcessStartInfo
+        {
+            FileName = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "cmd.exe" : "/bin/bash",
+            Arguments = RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                ? $"/C \"{scriptPath}\" \"{adbPath}\""
+                : $"\"{scriptPath}\" \"{adbPath}\"",
+            RedirectStandardOutput = true,
+            RedirectStandardError = true,
+            UseShellExecute = false,
+            CreateNoWindow = true
+        };
 
-            // Display the results
-            Console.WriteLine("Output: " + output);
+        using (var process = Process.Start(processInfo))
+        {
+            process.WaitForExit();
 
-            if (!string.IsNullOrEmpty(output))
+            string output = process.StandardOutput.ReadToEnd();
+            string error = process.StandardError.ReadToEnd();
+
+            if (!string.IsNullOrEmpty(error))
             {
-                return output;
+                Console.Error.WriteLine($"Script Error: {error}");
+                return $"Script Error: {error}";
             }
             else
             {
-                return "Error: " + error;
+                Console.WriteLine(output);
+                return output;
             }
-            
-        }
-        catch (Exception ex)
-        {
-            return "An error occurred: " + ex.Message;
         }
     }
     
