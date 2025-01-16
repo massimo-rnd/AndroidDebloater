@@ -13,6 +13,7 @@
 
   <PropertyGroup>
     <UseAppHost>true</UseAppHost>
+    <ApplicationIcon>test-icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -80,6 +81,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Remove="Components\adb\windows\AdbWinUsbApi.dll" />
+    <Content Include="test-icon.ico" />
     <EmbeddedResource Include="Components\adb\windows\AdbWinUsbApi.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
