@@ -19,6 +19,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/App.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Components/BashScriptHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Components/ShellExecutor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Components/WinScriptHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MainWindow.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MainWindow.axaml.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -70,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1736951912138</updated>
       <workItem from="1736951913486" duration="89000" />
-      <workItem from="1736952042933" duration="9537000" />
+      <workItem from="1736952042933" duration="16134000" />
     </task>
     <servers />
   </component>
@@ -86,13 +94,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Components/ShellExecutor.cs</url>
-          <line>77</line>
+          <line>78</line>
           <properties documentPath="$PROJECT_DIR$/Components/ShellExecutor.cs" containingFunctionPresentation="Method 'Execute'">
             <startOffsets>
-              <option value="2785" />
+              <option value="2884" />
             </startOffsets>
             <endOffsets>
-              <option value="2841" />
+              <option value="2940" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
