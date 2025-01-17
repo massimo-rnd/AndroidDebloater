@@ -1,5 +1,3 @@
-![Repo-Image](https://massimo.gg/github-images/nameland.webp)
-
 <div align="center">
 
 # AndroidDebloater
