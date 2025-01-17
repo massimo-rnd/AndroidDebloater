@@ -13,7 +13,7 @@ namespace AndroidDebloater
         public MainWindow()
         {
             InitializeComponent();
-            //DebloatBtn.IsEnabled = false;
+            DebloatBtn.IsEnabled = false;
         }
 
         public void ShowHelp(object sender, RoutedEventArgs args)
