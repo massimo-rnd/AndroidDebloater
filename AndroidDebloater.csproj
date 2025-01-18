@@ -99,6 +99,22 @@
     <EmbeddedResource Include="Components\Scripts\bash\huawei.sh">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\oneplus.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\oneplus.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\oneplus.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\oneplus.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\oppo.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\oppo.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\oppo.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\oppo.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
