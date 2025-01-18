@@ -115,6 +115,38 @@
     <EmbeddedResource Include="Components\Scripts\windows\oppo.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\realme.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\realme.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\samsung.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\samsung.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\realme.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\realme.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\samsung.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\samsung.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\vivo.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\vivo.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\vivo.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\vivo.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\xiaomi.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\xiaomi.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\xiaomi.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\xiaomi.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

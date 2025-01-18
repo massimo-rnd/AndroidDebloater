@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6296c7-7aec-4f24-bc54-04723f469c3a" name="Changes" comment="" />
+    <list default="true" id="bf6296c7-7aec-4f24-bc54-04723f469c3a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AndroidDebloater.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AndroidDebloater.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +87,7 @@
       <workItem from="1736951913486" duration="89000" />
       <workItem from="1736952042933" duration="31343000" />
       <workItem from="1737111941259" duration="1509000" />
-      <workItem from="1737132351176" duration="5317000" />
+      <workItem from="1737132351176" duration="5995000" />
     </task>
     <servers />
   </component>
