@@ -83,6 +83,22 @@
     <EmbeddedResource Include="Components\adb\windows\AdbWinUsbApi.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\googlem.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\googlem.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\googlem.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\googlem.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\huawei.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\huawei.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\huawei.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\huawei.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
