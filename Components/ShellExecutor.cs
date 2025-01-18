@@ -20,7 +20,6 @@ public class ShellExecutor
             {
                 case 1:
                     //Google
-                    //return WinScriptHandler.ExecuteBatchScript(WinScriptHandler.ExtractScript("AndroidDebloater.Components.Scripts.google.bat"));
                     return ExecuteScript("google");
                     break;
                 case 2:
@@ -32,8 +31,36 @@ public class ShellExecutor
                     return ExecuteScript("thirdparty");
                     break;
                 case 4:
-                    //FullDebloat
-                    return ExecuteScript("full");
+                    //Google Manufacturer
+                    return ExecuteScript("googlem");
+                    break;
+                case 5:
+                    //Huawei Manufacturer
+                    return ExecuteScript("huawei");
+                    break;
+                case 6:
+                    //OnePlus Manufacturer
+                    return ExecuteScript("oneplus");
+                    break;
+                case 7:
+                    //Oppo Manufacturer
+                    return ExecuteScript("oppo");
+                    break;
+                case 8:
+                    //Realme Manufacturer
+                    return ExecuteScript("realme");
+                    break;
+                case 9:
+                    //Samsung Manufacturer
+                    return ExecuteScript("samsung");
+                    break;
+                case 10:
+                    //Vivo Manufacturer
+                    return ExecuteScript("vivo");
+                    break;
+                case 11:
+                    //Xiaomi Manufacturer
+                    return ExecuteScript("xiaomi");
                     break;
                 default:
                     //nothing

@@ -9,6 +9,10 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
     <PackageIcon>test-icon.ico</PackageIcon>
+    <Version>1.1.0</Version>
+    <Authors>Massimo</Authors>
+    <AssemblyVersion>1.1</AssemblyVersion>
+    <FileVersion>1.1</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -41,9 +45,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Components\Scripts\bash\full.sh">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Components\Scripts\bash\google.sh">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -51,9 +52,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Scripts\bash\thirdparty.sh">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Scripts\windows\full.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Scripts\windows\google.bat">
