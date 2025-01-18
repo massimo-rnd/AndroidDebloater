@@ -9,6 +9,10 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <RuntimeIdentifiers>osx-x64</RuntimeIdentifiers>
     <PackageIcon>test-icon.ico</PackageIcon>
+    <Version>1.1.0</Version>
+    <Authors>Massimo</Authors>
+    <AssemblyVersion>1.1</AssemblyVersion>
+    <FileVersion>1.1</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -41,9 +45,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Components\Scripts\bash\full.sh">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
     <EmbeddedResource Include="Components\Scripts\bash\google.sh">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -51,9 +52,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Scripts\bash\thirdparty.sh">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\Scripts\windows\full.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\Scripts\windows\google.bat">
@@ -83,6 +81,70 @@
     <None Remove="Components\adb\windows\AdbWinUsbApi.dll" />
     <Content Include="test-icon.ico" />
     <EmbeddedResource Include="Components\adb\windows\AdbWinUsbApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\googlem.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\googlem.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\googlem.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\googlem.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\huawei.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\huawei.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\huawei.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\huawei.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\oneplus.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\oneplus.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\oneplus.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\oneplus.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\oppo.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\oppo.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\oppo.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\oppo.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\realme.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\realme.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\samsung.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\samsung.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\realme.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\realme.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\samsung.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\samsung.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\vivo.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\vivo.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\vivo.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\vivo.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\bash\xiaomi.sh" />
+    <EmbeddedResource Include="Components\Scripts\bash\xiaomi.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Remove="Components\Scripts\windows\xiaomi.bat" />
+    <EmbeddedResource Include="Components\Scripts\windows\xiaomi.bat">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

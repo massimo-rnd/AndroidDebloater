@@ -14,6 +14,7 @@ namespace AndroidDebloater
         {
             InitializeComponent();
             DebloatBtn.IsEnabled = false;
+            mSelector.IsEnabled = false;
         }
 
         public void ShowHelp(object sender, RoutedEventArgs args)
@@ -55,8 +56,55 @@ namespace AndroidDebloater
             }
             else
             {
-                clOutput.Text = ShellExecutor.StartDebloat(4);
+                //Manufacturer Debloat
+                int selectedIndex = mSelector.SelectedIndex;
+
+                switch (selectedIndex)
+                {
+                    case 0:
+                        //Google
+                        clOutput.Text = ShellExecutor.StartDebloat(4);
+                        break;
+                    case 1:
+                        //Huawei
+                        clOutput.Text = ShellExecutor.StartDebloat(5);
+                        break;
+                    case 2:
+                        //Oneplus
+                        clOutput.Text = ShellExecutor.StartDebloat(6);
+                        break;
+                    case 3:
+                        //Oppo
+                        clOutput.Text = ShellExecutor.StartDebloat(7);
+                        break;
+                    case 4:
+                        //Realme
+                        clOutput.Text = ShellExecutor.StartDebloat(8);
+                        break;
+                    case 5:
+                        //Samsung
+                        clOutput.Text = ShellExecutor.StartDebloat(9);
+                        break;
+                    case 6:
+                        //Vivo
+                        clOutput.Text = ShellExecutor.StartDebloat(10);
+                        break;
+                    case 7:
+                        //Xiaomi
+                        clOutput.Text = ShellExecutor.StartDebloat(11);
+                        break;
+                }
             }
+        }
+
+        public void EnableSelector(object sender, RoutedEventArgs args)
+        {
+            mSelector.IsEnabled = true;
+        }
+
+        public void DisableSelector(object sender, RoutedEventArgs args)
+        {
+            mSelector.IsEnabled = false;
         }
     }
 }
