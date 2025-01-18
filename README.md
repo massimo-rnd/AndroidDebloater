@@ -19,6 +19,7 @@ AndroidDebloater is a simple tool written in C#, that enables you to debloat you
 
 - Remove Bloatware from Phone
 - Pre-Made Scripts for Google Bloat, Android System Bloat, Third-Party Bloat
+- Manufacturer-Specific Debloat
 - No installation of ADB tools needed
 - Compatible with Windows, macOS & Linux
 
@@ -43,12 +44,6 @@ Now you can Connect your Phone. Your Phone should show a Message about trusting 
 To start, first click the "List ADB Devices" Button to see if your Device is connected.
 
 If sucessful, you can choose your Package and click "Start Debloat"
-
-## 🚧 Roadmap
-
-- [ ] Implement Manufacturer Specific Scripts
-
-Check out the [open issues](https://github.com/massimo-rnd/AndroidDebloater/issues) for more.
 
 ## 🤝 Contributing
 
