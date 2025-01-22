@@ -8,12 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf6296c7-7aec-4f24-bc54-04723f469c3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/ShellExecutor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ShellExecutor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageSelector.axaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PackageSelector.axaml.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,13 +107,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/MainWindow.axaml.cs</url>
-          <line>46</line>
+          <line>60</line>
           <properties documentPath="$PROJECT_DIR$/MainWindow.axaml.cs" containingFunctionPresentation="Method 'StartDebloater'">
             <startOffsets>
-              <option value="1686" />
+              <option value="2280" />
             </startOffsets>
             <endOffsets>
-              <option value="1715" />
+              <option value="2309" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />

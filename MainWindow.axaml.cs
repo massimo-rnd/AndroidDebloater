@@ -1,20 +1,30 @@
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using AndroidDebloater.Components;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media.TextFormatting.Unicode;
 using MsBox.Avalonia;
 
 namespace AndroidDebloater
 {
     public partial class MainWindow : Window
     {
+        private ObservableCollection<AndroidPackage> _items;
+        
         public MainWindow()
         {
             InitializeComponent();
             DebloatBtn.IsEnabled = false;
+            CDebloatBtn.IsEnabled = false;
             mSelector.IsEnabled = false;
+            sSelector.IsEnabled = false;
+            ScriptPanel.IsVisible = false;
+            CustomPanel.IsVisible = false;
+            cSelector.IsEnabled = false;
         }
 
         public void ShowHelp(object sender, RoutedEventArgs args)
@@ -36,6 +46,10 @@ namespace AndroidDebloater
                 {
                     Console.WriteLine($"Matched: {line.Trim()}");
                     DebloatBtn.IsEnabled = true;
+                    CDebloatBtn.IsEnabled = true;
+                    cSelector.IsEnabled = true;
+                    sSelector.IsEnabled = true;
+                    ScriptPanel.IsVisible = true;
                 }
             }
         }
@@ -107,10 +121,59 @@ namespace AndroidDebloater
             mSelector.IsEnabled = false;
         }
 
-        public void ShowSelector(object sender, RoutedEventArgs args)
+        public void ShowScripts(object sender, RoutedEventArgs args)
         {
-            var window = new PackageSelector();
-            window.Show();
+            ScriptPanel.IsVisible = true;
+            CustomPanel.IsVisible = false;
+        }
+
+        public void ShowCustomSelector(object sender, RoutedEventArgs args)
+        {
+            CustomPanel.IsVisible = true;
+            ScriptPanel.IsVisible = false;
+            
+            _items = new ObservableCollection<AndroidPackage>(CreateObservableCollection(ShellExecutor.GetPackages()));
+
+            // Get the ItemsControl by name and set its ItemsSource
+            var packageControl = this.FindControl<ItemsControl>("PackageList");
+            packageControl.ItemsSource = _items;
+        }
+        
+        private void RemoveSelected(object sender, RoutedEventArgs e)
+        {
+            
+            var selectedItems = new List<string>();
+            foreach (var item in _items)
+            {
+                if (item.IsChecked)
+                {
+                    selectedItems.Add(item.Text);
+                }
+            }
+            
+            clOutput.Text = "Uninstalling " + selectedItems.Count + " packages... \n";
+            
+            foreach (var item in selectedItems)
+            {
+                clOutput.Text += item + ": " +ShellExecutor.RemovePackage(item);
+            }
+        }
+        
+        public ObservableCollection<AndroidPackage> CreateObservableCollection(string input)
+        {
+            var collection = new ObservableCollection<AndroidPackage>();
+
+            // Split the input into lines
+            var lines = input.Split(new[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (var line in lines)
+            {
+                // Remove the "package:" prefix and add to the collection
+                var cleanedLine = line.Replace("package:", "").Trim();
+                collection.Add(new AndroidPackage { Text = cleanedLine, IsChecked = false });
+            }
+
+            return collection;
         }
     }
 }
