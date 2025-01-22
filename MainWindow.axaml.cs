@@ -106,5 +106,11 @@ namespace AndroidDebloater
         {
             mSelector.IsEnabled = false;
         }
+
+        public void ShowSelector(object sender, RoutedEventArgs args)
+        {
+            var window = new PackageSelector();
+            window.Show();
+        }
     }
 }

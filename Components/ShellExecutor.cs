@@ -14,6 +14,16 @@ public class ShellExecutor
         return AdbHelper.ExecuteAdbCommand("devices"); //Execute(command);
     }
 
+    public static string GetPackages()
+    {
+        return AdbHelper.ExecuteAdbCommand("shell cmd package list packages");
+    }
+
+    public static string RemovePackage(string packageName)
+    {
+        return AdbHelper.ExecuteAdbCommand("shell pm uninstall --user 0 " + packageName);
+    }
+
     public static string StartDebloat(int package)
     {
         switch (package)

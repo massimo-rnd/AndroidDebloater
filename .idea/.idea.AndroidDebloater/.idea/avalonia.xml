@@ -5,6 +5,7 @@
       <map>
         <entry key="App.axaml" value="AndroidDebloater.csproj" />
         <entry key="MainWindow.axaml" value="AndroidDebloater.csproj" />
+        <entry key="PackageSelector.axaml" value="AndroidDebloater.csproj" />
       </map>
     </option>
   </component>

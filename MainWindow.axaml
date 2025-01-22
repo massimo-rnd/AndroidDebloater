@@ -54,7 +54,8 @@
 			</ComboBox>
 			
 			<Button x:Name="DebloatBtn" Click="StartDebloater" Grid.Row="7" Grid.Column="0" VerticalAlignment="Bottom" Content="Start Debloat"/>
-			<Button Click="ShowHelp" Grid.Row="7" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Help"/>
+			<!--<Button Click="ShowHelp" Grid.Row="7" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Help"/>-->
+			<Button Click="ShowSelector" Grid.Row="7" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Test"/>
 		</Grid>
 		
 		
