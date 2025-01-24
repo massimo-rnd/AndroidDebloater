@@ -8,6 +8,8 @@
 ![Stars](https://img.shields.io/github/stars/massimo-rnd/AndroidDebloater)
 ![Last Commit](https://img.shields.io/github/last-commit/massimo-rnd/AndroidDebloater)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/massimo-rnd/AndroidDebloater?include_prereleases)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/massimo-rnd/AndroidDebloater/total?label=Total%20Users)
+
 
 </div>
 
@@ -47,9 +49,9 @@ If sucessful, you can choose your Package and click "Start Debloat"
 
 ## 🚧 AndroidDebloater 2.0 Roadmap
 
-- [ ] Individual Package Selection
-- [ ] More detailed help section
-- [ ] Rework UI (adjust for new Feature-Set)
+- [x] Individual Package Selection
+- [x] More detailed help section
+- [x] Rework UI (adjust for new Feature-Set)
 
 Check out the [open issues](https://github.com/massimo-rnd/AndroidDebloater/issues) for more.
 
