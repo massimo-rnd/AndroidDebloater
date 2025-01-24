@@ -117,7 +117,7 @@
 					<RowDefinition Height="*"/>
 				</Grid.RowDefinitions>
 				<Label Grid.Row="0" Content="Commandline Output"/>
-				<TextBox x:Name="clOutput" Grid.Row="1" Background="Black" Foreground="White" IsReadOnly="True" Text=""/>
+				<TextBox x:Name="clOutput" Grid.Row="1" Background="Black" Foreground="White" IsReadOnly="True" Text="" TextWrapping="Wrap"/>
 			</Grid>
 		</Border>
 	</Grid>

@@ -48,8 +48,8 @@ If sucessful, you can choose your Package and click "Start Debloat"
 ## 🚧 AndroidDebloater 2.0 Roadmap
 
 - [x] Individual Package Selection
-- [ ] More detailed help section
-- [ ] Rework UI (adjust for new Feature-Set)
+- [x] More detailed help section
+- [x] Rework UI (adjust for new Feature-Set)
 
 Check out the [open issues](https://github.com/massimo-rnd/AndroidDebloater/issues) for more.
 

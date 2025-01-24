@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using AndroidDebloater.Components;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
@@ -25,11 +26,17 @@ namespace AndroidDebloater
             ScriptPanel.IsVisible = false;
             CustomPanel.IsVisible = false;
             cSelector.IsEnabled = false;
+            clOutput.Text = BuildHelp();
         }
 
         public void ShowHelp(object sender, RoutedEventArgs args)
         {
-            var helpBox = MessageBoxManager.GetMessageBoxStandard("Help", "Please Enable Developer-Mode on your Android Device by clicking the Build-Number 7 Times, then in Developer-Options enable USB Debugging.\nWhen plugging your device into your PC it should show a message about trusting the PC. Click allow.", MsBox.Avalonia.Enums.ButtonEnum.Ok);
+            var helpBox = MessageBoxManager.GetMessageBoxStandard("Help", "Welcome to AndroidDebloater!\n\n"
+                                                                          + "To get started, please enable USB-Debugging on your Phone.\n"
+                                                                          + "To do this, go to the about page in your settings and click the 'Build number' 7 times.\n" 
+                                                                          + "Next, go to Developer Settings and Enable USB-Debugging.\n\n"
+                                                                          + "Now connect your phone, allow Debugging for your PC on your Phone and Click the 'List ADB Devices' button.\n\n"
+                                                                          + "If there are any problems when using this App, feel free to open an Issue on GitHub.", MsBox.Avalonia.Enums.ButtonEnum.Ok);
             var result = helpBox.ShowAsPopupAsync(this);
         }
 
@@ -56,7 +63,6 @@ namespace AndroidDebloater
 
         public void StartDebloater(object sender, RoutedEventArgs args)
         {
-            int packageValue;
             
             if ((bool)gDebloat.IsChecked)
             {
@@ -141,7 +147,6 @@ namespace AndroidDebloater
         
         private void RemoveSelected(object sender, RoutedEventArgs e)
         {
-            
             var selectedItems = new List<string>();
             foreach (var item in _items)
             {
@@ -174,6 +179,17 @@ namespace AndroidDebloater
             }
 
             return collection;
+        }
+
+        public string BuildHelp()
+        {
+            string help = "Welcome to AndroidDebloater!\n\n"
+                + "To get started, please enable USB-Debugging on your Phone.\n"
+                + "To do this, go to the about page in your settings and click the 'Build number' 7 times.\n" 
+                + "Next, go to Developer Settings and Enable USB-Debugging.\n\n"
+                + "Now connect your phone, allow Debugging for your PC on your Phone and Click the 'List ADB Devices' button.\n\n"
+                + "If there are any problems when using this App, feel free to open an Issue on GitHub.";
+            return help;
         }
     }
 }
