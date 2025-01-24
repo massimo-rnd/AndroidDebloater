@@ -8,6 +8,8 @@
 ![Stars](https://img.shields.io/github/stars/massimo-rnd/AndroidDebloater)
 ![Last Commit](https://img.shields.io/github/last-commit/massimo-rnd/AndroidDebloater)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/massimo-rnd/AndroidDebloater?include_prereleases)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/massimo-rnd/AndroidDebloater/total?label=Total%20Users)
+
 
 </div>
 

@@ -7,11 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf6296c7-7aec-4f24-bc54-04723f469c3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AndroidDebloater/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainWindow.axaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainWindow.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="bf6296c7-7aec-4f24-bc54-04723f469c3a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
