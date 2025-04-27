@@ -47,11 +47,10 @@ To start, first click the "List ADB Devices" Button to see if your Device is con
 
 If sucessful, you can choose your Package and click "Start Debloat"
 
-## 🚧 AndroidDebloater 2.0 Roadmap
+## 🚧 AndroidDebloater 3.0 Roadmap
 
-- [x] Individual Package Selection
-- [x] More detailed help section
-- [x] Rework UI (adjust for new Feature-Set)
+- [ ] Better UI & Help
+- [ ] Rework Scripts
 
 Check out the [open issues](https://github.com/massimo-rnd/AndroidDebloater/issues) for more.
 
